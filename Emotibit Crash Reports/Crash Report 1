@@ -1,0 +1,370 @@
+-------------------------------------
+Translated Report (Full Report Below)
+-------------------------------------
+
+Process:               EmotiBitOscilloscope [10779]
+Path:                  /Applications/EmotiBitOscilloscope.app/Contents/MacOS/EmotiBitOscilloscope
+Identifier:            cc.openFrameworks.EmotiBitOscilloscope
+Version:               1.0
+Code Type:             X86-64 (Native)
+Parent Process:        launchd [1]
+User ID:               501
+
+Date/Time:             2023-09-21 11:03:08.7295 -0700
+OS Version:            macOS 12.6.7 (21G651)
+Report Version:        12
+Anonymous UUID:        A4D30E34-6954-DA82-D426-B36016FE5887
+
+Sleep/Wake UUID:       5E51DD9F-644D-410B-80EC-D3D0E6AD0047
+
+Time Awake Since Boot: 590000 seconds
+Time Since Wake:       7886 seconds
+
+System Integrity Protection: enabled
+
+Crashed Thread:        4
+
+Exception Type:        EXC_CRASH (SIGABRT)
+Exception Codes:       0x0000000000000000, 0x0000000000000000
+Exception Note:        EXC_CORPSE_NOTIFY
+
+Application Specific Information:
+abort() called
+
+
+Thread 0::  Dispatch queue: com.apple.main-thread
+0   EmotiBitOscilloscope          	       0x101a402e0 ofEvent<ofKeyEventArgs, std::__1::recursive_mutex>::FunctionId<ofxInputField<int>, bool (ofxInputField<int>::*)(ofKeyEventArgs&)>::operator==(of::priv::BaseFunctionId const&) const + 0
+1   EmotiBitOscilloscope          	       0x101a39070 of::priv::BaseEvent<of::priv::Function<ofKeyEventArgs, std::__1::recursive_mutex>, std::__1::recursive_mutex>::Data::remove(of::priv::BaseFunctionId const&) + 80
+2   EmotiBitOscilloscope          	       0x101e2c7f1 ofMainLoop::exit() + 929
+3   EmotiBitOscilloscope          	       0x101e06bd9 ofExitCallback() + 41
+4   EmotiBitOscilloscope          	       0x101e070d6 ofRunApp(ofBaseApp*) + 150
+5   EmotiBitOscilloscope          	       0x101978022 main + 66
+6   dyld                          	       0x10348b52e start + 462
+
+Thread 1:: com.apple.NSEventThread
+0   libsystem_kernel.dylib        	    0x7ff80dd0596a mach_msg_trap + 10
+1   libsystem_kernel.dylib        	    0x7ff80dd05cd8 mach_msg + 56
+2   CoreFoundation                	    0x7ff80de0934d __CFRunLoopServiceMachPort + 319
+3   CoreFoundation                	    0x7ff80de079d8 __CFRunLoopRun + 1276
+4   CoreFoundation                	    0x7ff80de06e1c CFRunLoopRunSpecific + 562
+5   AppKit                        	    0x7ff8109af98e _NSEventThread + 132
+6   libsystem_pthread.dylib       	    0x7ff80dd424e1 _pthread_start + 125
+7   libsystem_pthread.dylib       	    0x7ff80dd3df6b thread_start + 15
+
+Thread 2:
+0   libsystem_kernel.dylib        	    0x7ff80dd0c082 __accept + 10
+1   EmotiBitOscilloscope          	       0x101a86367 ofxTCPManager::Accept(ofxTCPManager&) + 199
+2   EmotiBitOscilloscope          	       0x101a87b55 ofxTCPServer::threadedFunction() + 693
+3   EmotiBitOscilloscope          	       0x101e3368a ofThread::run() + 26
+4   EmotiBitOscilloscope          	       0x101e33dce void* std::__1::__thread_proxy<std::__1::tuple<std::__1::unique_ptr<std::__1::__thread_struct, std::__1::default_delete<std::__1::__thread_struct> >, std::__1::__bind<void (ofThread::*)(), ofThread*> > >(void*) + 62
+5   libsystem_pthread.dylib       	    0x7ff80dd424e1 _pthread_start + 125
+6   libsystem_pthread.dylib       	    0x7ff80dd3df6b thread_start + 15
+
+Thread 3:
+0   libsystem_kernel.dylib        	    0x7ff80dd05a72 swtch_pri + 10
+1   libsystem_pthread.dylib       	    0x7ff80dd3fc2f cthread_yield + 11
+2   EmotiBitOscilloscope          	       0x1019bb278 EmotiBitWiFiHost::updateDataThread() + 40
+3   EmotiBitOscilloscope          	       0x1019c2cee void* std::__1::__thread_proxy<std::__1::tuple<std::__1::unique_ptr<std::__1::__thread_struct, std::__1::default_delete<std::__1::__thread_struct> >, void (EmotiBitWiFiHost::*)(), EmotiBitWiFiHost*> >(void*) + 62
+4   libsystem_pthread.dylib       	    0x7ff80dd424e1 _pthread_start + 125
+5   libsystem_pthread.dylib       	    0x7ff80dd3df6b thread_start + 15
+
+Thread 4 Crashed:
+0   libsystem_kernel.dylib        	    0x7ff80dd0bffe __pthread_kill + 10
+1   libsystem_pthread.dylib       	    0x7ff80dd421ff pthread_kill + 263
+2   libsystem_c.dylib             	    0x7ff80dc8ddbe __abort + 139
+3   libsystem_c.dylib             	    0x7ff80dc8dd33 abort + 138
+4   libc++abi.dylib               	    0x7ff80dcfe082 abort_message + 241
+5   libc++abi.dylib               	    0x7ff80dcef245 demangling_terminate_handler() + 242
+6   libobjc.A.dylib               	    0x7ff80dbebe19 _objc_terminate() + 104
+7   libc++abi.dylib               	    0x7ff80dcfd4a7 std::__terminate(void (*)()) + 8
+8   libc++abi.dylib               	    0x7ff80dcffd05 __cxxabiv1::failed_throw(__cxxabiv1::__cxa_exception*) + 27
+9   libc++abi.dylib               	    0x7ff80dcffccc __cxa_throw + 116
+10  libc++.1.dylib                	    0x7ff80dca3a54 std::__1::__throw_out_of_range(char const*) + 56
+11  libc++.1.dylib                	    0x7ff80dcab30c std::__1::__vector_base_common<true>::__throw_out_of_range() const + 16
+12  EmotiBitOscilloscope          	       0x1019bd6f4 EmotiBitWiFiHost::updateAdvertisingIpList(std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> >) + 1556
+13  EmotiBitOscilloscope          	       0x1019bdf66 EmotiBitWiFiHost::processAdvertising(std::__1::vector<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> >, std::__1::allocator<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > > >&) + 1638
+14  EmotiBitOscilloscope          	       0x1019bb2da EmotiBitWiFiHost::processAdvertisingThread() + 74
+15  EmotiBitOscilloscope          	       0x1019c2cee void* std::__1::__thread_proxy<std::__1::tuple<std::__1::unique_ptr<std::__1::__thread_struct, std::__1::default_delete<std::__1::__thread_struct> >, void (EmotiBitWiFiHost::*)(), EmotiBitWiFiHost*> >(void*) + 62
+16  libsystem_pthread.dylib       	    0x7ff80dd424e1 _pthread_start + 125
+17  libsystem_pthread.dylib       	    0x7ff80dd3df6b thread_start + 15
+
+Thread 5:
+0   libsystem_pthread.dylib       	    0x7ff80dd3df48 start_wqthread + 0
+
+
+Thread 4 crashed with X86 Thread State (64-bit):
+  rax: 0x0000000000000000  rbx: 0x0000700002571000  rcx: 0x0000700002568468  rdx: 0x0000000000000000
+  rdi: 0x000000000000aa0b  rsi: 0x0000000000000006  rbp: 0x0000700002568490  rsp: 0x0000700002568468
+   r8: 0x0000000000000000   r9: 0x0000000000989680  r10: 0x0000700002571000  r11: 0x0000000000000246
+  r12: 0x000000000000aa0b  r13: 0x0000003000000008  r14: 0x0000000000000006  r15: 0x0000000000000016
+  rip: 0x00007ff80dd0bffe  rfl: 0x0000000000000246  cr2: 0x0000000101a402e0
+  
+Logical CPU:     0
+Error Code:      0x02000148 
+Trap Number:     133
+
+
+Binary Images:
+       0x101976000 -        0x1021d0fff cc.openFrameworks.EmotiBitOscilloscope (*) <ade5acf6-e31f-3c88-a27c-52539b255000> /Applications/EmotiBitOscilloscope.app/Contents/MacOS/EmotiBitOscilloscope
+       0x103486000 -        0x1034f1fff dyld (*) <2517e9fe-884a-3855-8532-92bffba3f81c> /usr/lib/dyld
+    0x7ff80dd04000 -     0x7ff80dd3bfff libsystem_kernel.dylib (*) <d0b338e0-26be-371b-a819-80b7d619a4ad> /usr/lib/system/libsystem_kernel.dylib
+    0x7ff80dd89000 -     0x7ff80e28bfff com.apple.CoreFoundation (6.9) <70b99b27-1b5b-33c4-b401-2ecdb80f3303> /System/Library/Frameworks/CoreFoundation.framework/Versions/A/CoreFoundation
+    0x7ff810803000 -     0x7ff811692fff com.apple.AppKit (6.9) <1a1a9da7-da66-31da-92cd-51b9cf968145> /System/Library/Frameworks/AppKit.framework/Versions/C/AppKit
+    0x7ff80dd3c000 -     0x7ff80dd47fff libsystem_pthread.dylib (*) <e5d44afd-2577-3cee-8711-9d8d426229e0> /usr/lib/system/libsystem_pthread.dylib
+    0x7ff80dc0c000 -     0x7ff80dc94fff libsystem_c.dylib (*) <e42e9d7a-03b4-340b-b61e-dcd45fd4acc0> /usr/lib/system/libsystem_c.dylib
+    0x7ff80dcee000 -     0x7ff80dd03fff libc++abi.dylib (*) <a99f1fb2-fd31-3cf4-be4d-a9fccf219974> /usr/lib/libc++abi.dylib
+    0x7ff80dbcf000 -     0x7ff80dc08fff libobjc.A.dylib (*) <4d9b0dca-7151-3875-b98e-b255db8267a8> /usr/lib/libobjc.A.dylib
+    0x7ff80dc95000 -     0x7ff80dcedfff libc++.1.dylib (*) <a031469a-a9fe-37e0-8523-4f80351ea635> /usr/lib/libc++.1.dylib
+
+External Modification Summary:
+  Calls made by other processes targeting this process:
+    task_for_pid: 0
+    thread_create: 0
+    thread_set_state: 0
+  Calls made by this process:
+    task_for_pid: 0
+    thread_create: 0
+    thread_set_state: 0
+  Calls made by all processes on this machine:
+    task_for_pid: 0
+    thread_create: 0
+    thread_set_state: 0
+
+VM Region Summary:
+ReadOnly portion of Libraries: Total=979.5M resident=0K(0%) swapped_out_or_unallocated=979.5M(100%)
+Writable regions: Total=581.9M written=0K(0%) resident=0K(0%) swapped_out=0K(0%) unallocated=581.9M(100%)
+
+                                VIRTUAL   REGION 
+REGION TYPE                        SIZE    COUNT (non-coalesced) 
+===========                     =======  ======= 
+Accelerate framework               640K        5 
+Activity Tracing                   256K        1 
+CG backing stores                  544K        4 
+CG image                           224K       36 
+ColorSync                          220K       26 
+CoreAnimation                      128K       20 
+CoreGraphics                        12K        2 
+CoreUI image data                 1604K       25 
+Foundation                          32K        2 
+Kernel Alloc Once                    8K        1 
+MALLOC                           184.9M       50 
+MALLOC guard page                   32K        8 
+MALLOC_NANO (reserved)           384.0M        1         reserved VM address space (unallocated)
+ObjC additional data                15K        1 
+STACK GUARD                       56.0M        6 
+Stack                             10.5M        6 
+VM_ALLOCATE                        524K      114 
+__CTF                               756        1 
+__DATA                            22.4M      397 
+__DATA_CONST                      19.9M      242 
+__DATA_DIRTY                      1027K      142 
+__FONT_DATA                          4K        1 
+__GLSLBUILTINS                    5176K        1 
+__LINKEDIT                       650.2M       13 
+__TEXT                           329.4M      414 
+__UNICODE                          592K        1 
+dyld private memory               1056K        2 
+mapped file                      153.3M       30 
+shared memory                      776K       17 
+===========                     =======  ======= 
+TOTAL                              1.8G     1569 
+TOTAL, minus reserved VM space     1.4G     1569 
+
+
+
+-----------
+Full Report
+-----------
+
+{"app_name":"EmotiBitOscilloscope","timestamp":"2023-09-21 11:03:24.00 -0700","app_version":"","slice_uuid":"ade5acf6-e31f-3c88-a27c-52539b255000","build_version":"1.0","platform":1,"bundleID":"cc.openFrameworks.EmotiBitOscilloscope","share_with_app_devs":0,"is_first_party":0,"bug_type":"309","os_version":"macOS 12.6.7 (21G651)","incident_id":"DCF974BD-F001-4A34-B527-C01855F17409","name":"EmotiBitOscilloscope"}
+{
+  "uptime" : 590000,
+  "procLaunch" : "2023-09-20 21:39:40.5453 -0700",
+  "procRole" : "Background",
+  "version" : 2,
+  "userID" : 501,
+  "deployVersion" : 210,
+  "modelCode" : "MacBookAir7,2",
+  "procStartAbsTime" : 548066179041497,
+  "coalitionID" : 749,
+  "osVersion" : {
+    "train" : "macOS 12.6.7",
+    "build" : "21G651",
+    "releaseType" : "User"
+  },
+  "captureTime" : "2023-09-21 11:03:08.7295 -0700",
+  "incident" : "DCF974BD-F001-4A34-B527-C01855F17409",
+  "bug_type" : "309",
+  "pid" : 10779,
+  "procExitAbsTime" : 594209592204679,
+  "cpuType" : "X86-64",
+  "procName" : "EmotiBitOscilloscope",
+  "procPath" : "\/Applications\/EmotiBitOscilloscope.app\/Contents\/MacOS\/EmotiBitOscilloscope",
+  "bundleInfo" : {"CFBundleVersion":"1.0","CFBundleIdentifier":"cc.openFrameworks.EmotiBitOscilloscope"},
+  "storeInfo" : {"deviceIdentifierForVendor":"35C906F2-D537-5EBF-AC65-842CE7D6419A","thirdParty":true},
+  "parentProc" : "launchd",
+  "parentPid" : 1,
+  "coalitionName" : "cc.openFrameworks.EmotiBitOscilloscope",
+  "crashReporterKey" : "A4D30E34-6954-DA82-D426-B36016FE5887",
+  "wakeTime" : 7886,
+  "sleepWakeUUID" : "5E51DD9F-644D-410B-80EC-D3D0E6AD0047",
+  "sip" : "enabled",
+  "isCorpse" : 1,
+  "exception" : {"codes":"0x0000000000000000, 0x0000000000000000","rawCodes":[0,0],"type":"EXC_CRASH","signal":"SIGABRT"},
+  "asi" : {"libsystem_c.dylib":["abort() called"]},
+  "extMods" : {"caller":{"thread_create":0,"thread_set_state":0,"task_for_pid":0},"system":{"thread_create":0,"thread_set_state":0,"task_for_pid":0},"targeted":{"thread_create":0,"thread_set_state":0,"task_for_pid":0},"warnings":0},
+  "faultingThread" : 4,
+  "threads" : [{"id":5699873,"queue":"com.apple.main-thread","frames":[{"imageOffset":828128,"symbol":"ofEvent<ofKeyEventArgs, std::__1::recursive_mutex>::FunctionId<ofxInputField<int>, bool (ofxInputField<int>::*)(ofKeyEventArgs&)>::operator==(of::priv::BaseFunctionId const&) const","symbolLocation":0,"imageIndex":0},{"imageOffset":798832,"symbol":"of::priv::BaseEvent<of::priv::Function<ofKeyEventArgs, std::__1::recursive_mutex>, std::__1::recursive_mutex>::Data::remove(of::priv::BaseFunctionId const&)","symbolLocation":80,"imageIndex":0},{"imageOffset":4941809,"symbol":"ofMainLoop::exit()","symbolLocation":929,"imageIndex":0},{"imageOffset":4787161,"symbol":"ofExitCallback()","symbolLocation":41,"imageIndex":0},{"imageOffset":4788438,"symbol":"ofRunApp(ofBaseApp*)","symbolLocation":150,"imageIndex":0},{"imageOffset":8226,"symbol":"main","symbolLocation":66,"imageIndex":0},{"imageOffset":21806,"symbol":"start","symbolLocation":462,"imageIndex":1}]},{"id":5699925,"name":"com.apple.NSEventThread","frames":[{"imageOffset":6506,"symbol":"mach_msg_trap","symbolLocation":10,"imageIndex":2},{"imageOffset":7384,"symbol":"mach_msg","symbolLocation":56,"imageIndex":2},{"imageOffset":525133,"symbol":"__CFRunLoopServiceMachPort","symbolLocation":319,"imageIndex":3},{"imageOffset":518616,"symbol":"__CFRunLoopRun","symbolLocation":1276,"imageIndex":3},{"imageOffset":515612,"symbol":"CFRunLoopRunSpecific","symbolLocation":562,"imageIndex":3},{"imageOffset":1755534,"symbol":"_NSEventThread","symbolLocation":132,"imageIndex":4},{"imageOffset":25825,"symbol":"_pthread_start","symbolLocation":125,"imageIndex":5},{"imageOffset":8043,"symbol":"thread_start","symbolLocation":15,"imageIndex":5}]},{"id":5699965,"frames":[{"imageOffset":32898,"symbol":"__accept","symbolLocation":10,"imageIndex":2},{"imageOffset":1114983,"symbol":"ofxTCPManager::Accept(ofxTCPManager&)","symbolLocation":199,"imageIndex":0},{"imageOffset":1121109,"symbol":"ofxTCPServer::threadedFunction()","symbolLocation":693,"imageIndex":0},{"imageOffset":4970122,"symbol":"ofThread::run()","symbolLocation":26,"imageIndex":0},{"imageOffset":4971982,"symbol":"void* std::__1::__thread_proxy<std::__1::tuple<std::__1::unique_ptr<std::__1::__thread_struct, std::__1::default_delete<std::__1::__thread_struct> >, std::__1::__bind<void (ofThread::*)(), ofThread*> > >(void*)","symbolLocation":62,"imageIndex":0},{"imageOffset":25825,"symbol":"_pthread_start","symbolLocation":125,"imageIndex":5},{"imageOffset":8043,"symbol":"thread_start","symbolLocation":15,"imageIndex":5}]},{"id":5699966,"frames":[{"imageOffset":6770,"symbol":"swtch_pri","symbolLocation":10,"imageIndex":2},{"imageOffset":15407,"symbol":"cthread_yield","symbolLocation":11,"imageIndex":5},{"imageOffset":283256,"symbol":"EmotiBitWiFiHost::updateDataThread()","symbolLocation":40,"imageIndex":0},{"imageOffset":314606,"symbol":"void* std::__1::__thread_proxy<std::__1::tuple<std::__1::unique_ptr<std::__1::__thread_struct, std::__1::default_delete<std::__1::__thread_struct> >, void (EmotiBitWiFiHost::*)(), EmotiBitWiFiHost*> >(void*)","symbolLocation":62,"imageIndex":0},{"imageOffset":25825,"symbol":"_pthread_start","symbolLocation":125,"imageIndex":5},{"imageOffset":8043,"symbol":"thread_start","symbolLocation":15,"imageIndex":5}]},{"triggered":true,"id":5699967,"threadState":{"r13":{"value":206158430216},"rax":{"value":0},"rflags":{"value":582},"cpu":{"value":0},"r14":{"value":6},"rsi":{"value":6},"r8":{"value":0},"cr2":{"value":4322493152},"rdx":{"value":0},"r10":{"value":123145341571072},"r9":{"value":10000000},"r15":{"value":22},"rbx":{"value":123145341571072},"trap":{"value":133},"err":{"value":33554760},"r11":{"value":582},"rip":{"value":140703360401406,"matchesCrashFrame":1},"rbp":{"value":123145341535376},"rsp":{"value":123145341535336},"r12":{"value":43531},"rcx":{"value":123145341535336},"flavor":"x86_THREAD_STATE","rdi":{"value":43531}},"frames":[{"imageOffset":32766,"symbol":"__pthread_kill","symbolLocation":10,"imageIndex":2},{"imageOffset":25087,"symbol":"pthread_kill","symbolLocation":263,"imageIndex":5},{"imageOffset":531902,"symbol":"__abort","symbolLocation":139,"imageIndex":6},{"imageOffset":531763,"symbol":"abort","symbolLocation":138,"imageIndex":6},{"imageOffset":65666,"symbol":"abort_message","symbolLocation":241,"imageIndex":7},{"imageOffset":4677,"symbol":"demangling_terminate_handler()","symbolLocation":242,"imageIndex":7},{"imageOffset":118297,"symbol":"_objc_terminate()","symbolLocation":104,"imageIndex":8},{"imageOffset":62631,"symbol":"std::__terminate(void (*)())","symbolLocation":8,"imageIndex":7},{"imageOffset":72965,"symbol":"__cxxabiv1::failed_throw(__cxxabiv1::__cxa_exception*)","symbolLocation":27,"imageIndex":7},{"imageOffset":72908,"symbol":"__cxa_throw","symbolLocation":116,"imageIndex":7},{"imageOffset":59988,"symbol":"std::__1::__throw_out_of_range(char const*)","symbolLocation":56,"imageIndex":9},{"imageOffset":90892,"symbol":"std::__1::__vector_base_common<true>::__throw_out_of_range() const","symbolLocation":16,"imageIndex":9},{"imageOffset":292596,"symbol":"EmotiBitWiFiHost::updateAdvertisingIpList(std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> >)","symbolLocation":1556,"imageIndex":0},{"imageOffset":294758,"symbol":"EmotiBitWiFiHost::processAdvertising(std::__1::vector<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> >, std::__1::allocator<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > > >&)","symbolLocation":1638,"imageIndex":0},{"imageOffset":283354,"symbol":"EmotiBitWiFiHost::processAdvertisingThread()","symbolLocation":74,"imageIndex":0},{"imageOffset":314606,"symbol":"void* std::__1::__thread_proxy<std::__1::tuple<std::__1::unique_ptr<std::__1::__thread_struct, std::__1::default_delete<std::__1::__thread_struct> >, void (EmotiBitWiFiHost::*)(), EmotiBitWiFiHost*> >(void*)","symbolLocation":62,"imageIndex":0},{"imageOffset":25825,"symbol":"_pthread_start","symbolLocation":125,"imageIndex":5},{"imageOffset":8043,"symbol":"thread_start","symbolLocation":15,"imageIndex":5}]},{"id":6067284,"frames":[{"imageOffset":8008,"symbol":"start_wqthread","symbolLocation":0,"imageIndex":5}]}],
+  "usedImages" : [
+  {
+    "source" : "P",
+    "arch" : "x86_64",
+    "base" : 4321665024,
+    "CFBundleIdentifier" : "cc.openFrameworks.EmotiBitOscilloscope",
+    "size" : 8761344,
+    "uuid" : "ade5acf6-e31f-3c88-a27c-52539b255000",
+    "path" : "\/Applications\/EmotiBitOscilloscope.app\/Contents\/MacOS\/EmotiBitOscilloscope",
+    "name" : "EmotiBitOscilloscope",
+    "CFBundleVersion" : "1.0"
+  },
+  {
+    "source" : "P",
+    "arch" : "x86_64",
+    "base" : 4350042112,
+    "size" : 442368,
+    "uuid" : "2517e9fe-884a-3855-8532-92bffba3f81c",
+    "path" : "\/usr\/lib\/dyld",
+    "name" : "dyld"
+  },
+  {
+    "source" : "P",
+    "arch" : "x86_64",
+    "base" : 140703360368640,
+    "size" : 229376,
+    "uuid" : "d0b338e0-26be-371b-a819-80b7d619a4ad",
+    "path" : "\/usr\/lib\/system\/libsystem_kernel.dylib",
+    "name" : "libsystem_kernel.dylib"
+  },
+  {
+    "source" : "P",
+    "arch" : "x86_64h",
+    "base" : 140703360913408,
+    "CFBundleShortVersionString" : "6.9",
+    "CFBundleIdentifier" : "com.apple.CoreFoundation",
+    "size" : 5255168,
+    "uuid" : "70b99b27-1b5b-33c4-b401-2ecdb80f3303",
+    "path" : "\/System\/Library\/Frameworks\/CoreFoundation.framework\/Versions\/A\/CoreFoundation",
+    "name" : "CoreFoundation",
+    "CFBundleVersion" : "1866"
+  },
+  {
+    "source" : "P",
+    "arch" : "x86_64",
+    "base" : 140703405453312,
+    "CFBundleShortVersionString" : "6.9",
+    "CFBundleIdentifier" : "com.apple.AppKit",
+    "size" : 15269888,
+    "uuid" : "1a1a9da7-da66-31da-92cd-51b9cf968145",
+    "path" : "\/System\/Library\/Frameworks\/AppKit.framework\/Versions\/C\/AppKit",
+    "name" : "AppKit",
+    "CFBundleVersion" : "2113.60.148"
+  },
+  {
+    "source" : "P",
+    "arch" : "x86_64",
+    "base" : 140703360598016,
+    "size" : 49152,
+    "uuid" : "e5d44afd-2577-3cee-8711-9d8d426229e0",
+    "path" : "\/usr\/lib\/system\/libsystem_pthread.dylib",
+    "name" : "libsystem_pthread.dylib"
+  },
+  {
+    "source" : "P",
+    "arch" : "x86_64",
+    "base" : 140703359352832,
+    "size" : 561152,
+    "uuid" : "e42e9d7a-03b4-340b-b61e-dcd45fd4acc0",
+    "path" : "\/usr\/lib\/system\/libsystem_c.dylib",
+    "name" : "libsystem_c.dylib"
+  },
+  {
+    "source" : "P",
+    "arch" : "x86_64",
+    "base" : 140703360278528,
+    "size" : 90112,
+    "uuid" : "a99f1fb2-fd31-3cf4-be4d-a9fccf219974",
+    "path" : "\/usr\/lib\/libc++abi.dylib",
+    "name" : "libc++abi.dylib"
+  },
+  {
+    "source" : "P",
+    "arch" : "x86_64h",
+    "base" : 140703359102976,
+    "size" : 237568,
+    "uuid" : "4d9b0dca-7151-3875-b98e-b255db8267a8",
+    "path" : "\/usr\/lib\/libobjc.A.dylib",
+    "name" : "libobjc.A.dylib"
+  },
+  {
+    "source" : "P",
+    "arch" : "x86_64",
+    "base" : 140703359913984,
+    "size" : 364544,
+    "uuid" : "a031469a-a9fe-37e0-8523-4f80351ea635",
+    "path" : "\/usr\/lib\/libc++.1.dylib",
+    "name" : "libc++.1.dylib"
+  }
+],
+  "sharedCache" : {
+  "base" : 140703357341696,
+  "size" : 19331678208,
+  "uuid" : "62c3e042-43ff-3ed0-b185-f12338b5fb88"
+},
+  "vmSummary" : "ReadOnly portion of Libraries: Total=979.5M resident=0K(0%) swapped_out_or_unallocated=979.5M(100%)\nWritable regions: Total=581.9M written=0K(0%) resident=0K(0%) swapped_out=0K(0%) unallocated=581.9M(100%)\n\n                                VIRTUAL   REGION \nREGION TYPE                        SIZE    COUNT (non-coalesced) \n===========                     =======  ======= \nAccelerate framework               640K        5 \nActivity Tracing                   256K        1 \nCG backing stores                  544K        4 \nCG image                           224K       36 \nColorSync                          220K       26 \nCoreAnimation                      128K       20 \nCoreGraphics                        12K        2 \nCoreUI image data                 1604K       25 \nFoundation                          32K        2 \nKernel Alloc Once                    8K        1 \nMALLOC                           184.9M       50 \nMALLOC guard page                   32K        8 \nMALLOC_NANO (reserved)           384.0M        1         reserved VM address space (unallocated)\nObjC additional data                15K        1 \nSTACK GUARD                       56.0M        6 \nStack                             10.5M        6 \nVM_ALLOCATE                        524K      114 \n__CTF                               756        1 \n__DATA                            22.4M      397 \n__DATA_CONST                      19.9M      242 \n__DATA_DIRTY                      1027K      142 \n__FONT_DATA                          4K        1 \n__GLSLBUILTINS                    5176K        1 \n__LINKEDIT                       650.2M       13 \n__TEXT                           329.4M      414 \n__UNICODE                          592K        1 \ndyld private memory               1056K        2 \nmapped file                      153.3M       30 \nshared memory                      776K       17 \n===========                     =======  ======= \nTOTAL                              1.8G     1569 \nTOTAL, minus reserved VM space     1.4G     1569 \n",
+  "legacyInfo" : {
+  "threadTriggered" : {
+
+  }
+},
+  "trialInfo" : {
+  "rollouts" : [
+    {
+      "rolloutId" : "60f8ddccefea4203d95cbeef",
+      "factorPackIds" : {
+
+      },
+      "deploymentId" : 240000025
+    },
+    {
+      "rolloutId" : "61af99aeda72d16a4beb7756",
+      "factorPackIds" : {
+
+      },
+      "deploymentId" : 240000409
+    }
+  ],
+  "experiments" : [
+    {
+      "treatmentId" : "6dd670af-0633-45e4-ae5f-122ae4df02be",
+      "experimentId" : "64406ba83deb637ac8a04419",
+      "deploymentId" : 900000017
+    }
+  ]
+}
+}
+
+Model: MacBookAir7,2, BootROM 481.0.0.0.0, 2 processors, Dual-Core Intel Core i5, 1.6 GHz, 8 GB, SMC 2.27f2
+Graphics: Intel HD Graphics 6000, Intel HD Graphics 6000, Built-In
+Display: Color LCD, 1440 x 900 (Widescreen eXtended Graphics Array Plus), Main, MirrorOff, Online
+Memory Module: BANK 0/DIMM0, 4 GB, DDR3, 1600 MHz, 0x02FE, 0x000000000000000000000000000000000000
+Memory Module: BANK 1/DIMM0, 4 GB, DDR3, 1600 MHz, 0x02FE, 0x000000000000000000000000000000000000
+AirPort: spairport_wireless_card_type_wifi (0x14E4, 0x117), Broadcom BCM43xx 1.0 (7.77.111.1 AirPortDriverBrcmNIC-1710.4)
+AirPort: 
+Bluetooth: Version (null), 0 services, 0 devices, 0 incoming serial ports
+Network Service: Wi-Fi, AirPort, en0
+Serial ATA Device: APPLE SSD SM0256G, 251 GB
+USB Device: USB30Bus
+USB Device: BRCM20702 Hub
+USB Device: Bluetooth USB Host Controller
+USB Device: USB Receiver
+Thunderbolt Bus: MacBook Air, Apple Inc., 27.2
